@@ -6,35 +6,39 @@
 <title>smolmeiji · home</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="commission">
 
 <div class="nav-wrap">
   <nav>
-    <a class="nav-btn" data-page="home" href="index.html">home</a>
-    <a class="nav-btn" data-page="commission" href="commission.html">commission info</a>
-    <a class="nav-btn" data-page="tos" href="tos.html">term of service</a>
-    <a class="nav-btn" data-page="contact" href="contact.html">contact</a>
+    <a class="nav-btn" data-page="home" href="index.html" data-i18n="nav.home">home</a>
+<a class="nav-btn" data-page="commission" href="commission.html" data-i18n="nav.commission">commission info</a>
+<a class="nav-btn" data-page="tos" href="tos.html" data-i18n="nav.tos">term of service</a>
+<a class="nav-btn" data-page="contact" href="contact.html" data-i18n="nav.contact">contact</a>
   </nav>
+<div class="lang-switch" role="group" aria-label="Language">
+  <button type="button" class="lang-btn" data-lang="en">EN</button>
+  <button type="button" class="lang-btn" data-lang="th">TH</button>
+</div>
 </div>
 
 <main>
-  <div class="ribbon-row"><div class="ribbon">commission info</div></div>
+  <div class="ribbon-row"><div class="ribbon" data-i18n="commission.ribbon">commission info</div></div>
 
   <div class="package-menu">
     <a class="card package-menu-item hover-lift" href="commission-icon.html">
-      <div><div class="line2">icon profile</div><div class="menu-price">from 350 THB</div></div>
+      <div><div class="line2" data-i18n="service.icon">icon profile</div><div class="menu-price" data-i18n="startingprice.icon" >from 350 THB</div></div>
     </a>
     <a class="card package-menu-item hover-lift" href="commission-character.html">
-      <div><div class="line2">character art</div><div class="menu-price">from 800 THB</div></div>
+      <div><div class="line2" data-i18n="service.character">character art</div><div class="menu-price" data-i18n="startingprice.character">from 800 THB</div></div>
     </a>
     <a class="card package-menu-item hover-lift" href="commission-illustration.html">
-      <div><div class="line2">illustration</div><div class="menu-price">from 1,500 THB</div></div>
+      <div><div class="line2" data-i18n="service.illustration">illustration</div><div class="menu-price" data-i18n="startingprice.illustration">from 1,500 THB</div></div>
     </a>
     <a class="card package-menu-item hover-lift" href="commission-motion.html">
-      <div><div class="line2">motion design</div><div class="menu-price">from 3,000 THB</div></div>
+      <div><div class="line2" data-i18n="service.motion">motion design</div><div class="menu-price" data-i18n="startingprice.motion">from 3,000 THB</div></div>
     </a>
   </div>
 
@@ -44,6 +48,7 @@
   </footer>
 </main>
 
+<script src="translations.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
