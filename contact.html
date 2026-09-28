@@ -6,22 +6,26 @@
 <title>smolmeiji · contact</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="contact">
 
 <div class="nav-wrap">
   <nav>
-    <a class="nav-btn" data-page="home" href="index.html">home</a>
-    <a class="nav-btn" data-page="commission" href="commission.html">commission info</a>
-    <a class="nav-btn" data-page="tos" href="tos.html">term of service</a>
-    <a class="nav-btn" data-page="contact" href="contact.html">contact</a>
+    <a class="nav-btn" data-page="home" href="index.html" data-i18n="nav.home">home</a>
+<a class="nav-btn" data-page="commission" href="commission.html" data-i18n="nav.commission">commission info</a>
+<a class="nav-btn" data-page="tos" href="tos.html" data-i18n="nav.tos">term of service</a>
+<a class="nav-btn" data-page="contact" href="contact.html" data-i18n="nav.contact">contact</a>
   </nav>
+<div class="lang-switch" role="group" aria-label="Language">
+  <button type="button" class="lang-btn" data-lang="en">EN</button>
+  <button type="button" class="lang-btn" data-lang="th">TH</button>
+</div>
 </div>
 
 <main>
-  <div class="ribbon-row"><div class="ribbon">contact</div></div>
+  <div class="ribbon-row"><div class="ribbon" data-i18n="nav.contact">contact</div></div>
 
   <div class="contact-top">
     <div class="contact-left">
@@ -51,7 +55,7 @@
           <img src="icon/icon-pixiv.svg" alt="Pixiv">
         </a>
       </div>
-      <a class="queue-card hover-lift" href="https://app.notion.com/p/Commission-Public-View-3e4c6a8f21fc808eb594e2bfcd30682a?source=copy_link" target="_blank" rel="noopener">commission queue</a>
+      <a class="queue-card hover-lift" href="https://app.notion.com/p/Commission-Public-View-3e4c6a8f21fc808eb594e2bfcd30682a?source=copy_link" target="_blank" rel="noopener" data-i18n="commission.queue">commission queue</a>
     </div>
     <div class="card contact-portrait card--fill"><img class="brand-art" src="image/silly-3.png" alt="smolmeiji character illustration"></div>
   </div>
@@ -62,6 +66,7 @@
   </footer>
 </main>
 
+<script src="translations.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
