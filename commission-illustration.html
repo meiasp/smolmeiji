@@ -6,29 +6,33 @@
 <title>smolmeiji · illustration</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="commission" data-package="illustration">
 
 <div class="nav-wrap">
   <nav>
-    <a class="nav-btn" data-page="home" href="index.html">home</a>
-    <a class="nav-btn" data-page="commission" href="commission.html">commission info</a>
-    <a class="nav-btn" data-page="tos" href="tos.html">term of service</a>
-    <a class="nav-btn" data-page="contact" href="contact.html">contact</a>
+    <a class="nav-btn" data-page="home" href="index.html" data-i18n="nav.home">home</a>
+<a class="nav-btn" data-page="commission" href="commission.html" data-i18n="nav.commission">commission info</a>
+<a class="nav-btn" data-page="tos" href="tos.html" data-i18n="nav.tos">term of service</a>
+<a class="nav-btn" data-page="contact" href="contact.html" data-i18n="nav.contact">contact</a>
   </nav>
+<div class="lang-switch" role="group" aria-label="Language">
+  <button type="button" class="lang-btn" data-lang="en">EN</button>
+  <button type="button" class="lang-btn" data-lang="th">TH</button>
+</div>
 </div>
 
 <main>
-  <div class="ribbon-row"><div class="ribbon">illustration</div></div>
+  <div class="ribbon-row"><div class="ribbon" data-i18n="service.illustration">illustration</div></div>
 
   <div class="subnav-row">
     <div class="subnav">
-      <a class="subnav-btn" data-package="icon" href="commission-icon.html">icon profile</a>
-      <a class="subnav-btn" data-package="character" href="commission-character.html">character art</a>
-      <a class="subnav-btn" data-package="illustration" href="commission-illustration.html">illustration</a>
-      <a class="subnav-btn" data-package="motion" href="commission-motion.html">motion design</a>
+      <a class="subnav-btn" data-package="icon" href="commission-icon.html" data-i18n="service.icon">icon profile</a>
+      <a class="subnav-btn" data-package="character" href="commission-character.html" data-i18n="service.character">character art</a>
+      <a class="subnav-btn" data-package="illustration" href="commission-illustration.html" data-i18n="service.illustration">illustration</a>
+      <a class="subnav-btn" data-package="motion" href="commission-motion.html" data-i18n="service.motion">motion design</a>
     </div>
   </div>
 
@@ -37,29 +41,29 @@
 
     <div class="card package-info">
       <div class="package-head">
-        <h3>illustration</h3>
-        <div class="package-price"><span class="price-label">staring price</span> <span class="price-value">1,500 THB</span></div>
+        <h3 data-i18n="service.illustration">illustration</h3>
+        <div class="package-price"><span class="price-label" data-i18n="price.starting">starting price</span> <span class="price-value">1,500 THB</span></div>
       </div>
 
       <div class="usage-group">
         <button type="button" class="usage-option checked" data-tier="personal" data-multiplier="1">
-          <span class="checkbox-icon"></span>personal
+          <span class="checkbox-icon"></span><span data-i18n="usage.personal">personal</span>
         </button>
         <button type="button" class="usage-option" data-tier="branding" data-multiplier="1.5">
-          <span class="checkbox-icon"></span>branding
+          <span class="checkbox-icon"></span><span data-i18n="usage.branding">branding</span>
         </button>
         <button type="button" class="usage-option" data-tier="commercial" data-multiplier="2">
-          <span class="checkbox-icon"></span>commercial
+          <span class="checkbox-icon"></span><span data-i18n="usage.commercial">commercial</span>
         </button>
       </div>
 
       <ul class="package-terms">
-       <li>Clients may provide character references and brief the artist on their desired expression and pose.</li>
-       <li>The estimated turnaround time is 2–4 weeks, depending on the complexity of the commission and the artist's current queue.</li>
-       <li>Up to 3 revisions are included during the sketching phase, with 2 minor correction allowed during the final stage. Major changes after sketch approval may incur an additional fee.</li>
-       <li>The final artwork will be delivered as a high-resolution PNG file. Additional files, such as PSD files for animation, can be requested for an extra fee.</li>
-       <li>The artist may post the finished artwork on their portfolio and social media unless the client requests a private commission in advance.</li>
-       <li>The artist reserves the right to decline a commission if the request is not suitable for their art style.</li>
+       <li data-i18n="illustration.term1">Clients may provide character references and brief the artist on their desired expression and pose.</li>
+       <li data-i18n="illustration.term2">The estimated turnaround time is 2–4 weeks, depending on the complexity of the commission and the artist's current queue.</li>
+       <li data-i18n="illustration.term3">Up to 3 revisions are included during the sketching phase, with 2 minor correction allowed during the final stage. Major changes after sketch approval may incur an additional fee.</li>
+       <li data-i18n="illustration.term4">The final artwork will be delivered as a high-resolution PNG file. Additional files, such as PSD files for animation, can be requested for an extra fee.</li>
+       <li data-i18n="illustration.term5">The artist may post the finished artwork on their portfolio and social media unless the client requests a private commission in advance.</li>
+       <li data-i18n="illustration.term6">The artist reserves the right to decline a commission if the request is not suitable for their art style.</li>
       </ul>
     </div>
   </div>
@@ -83,6 +87,7 @@
   </footer>
 </main>
 
+<script src="translations.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
