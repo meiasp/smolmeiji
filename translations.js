@@ -100,6 +100,8 @@ const translations = {
     'tos.adopt.ownership.point10': 'if you want to use the character for merchandise, branding, products, or other commercial projects, please refer to my Usage Rights terms or contact me if the intended use is unclear.',
     'tos.adopt.ownership.point11': 'i retain the right to display the original adopt artwork in my portfolio and social media, and touse the character as an example of my work.',
     'tos.adopt.ownership.point12': 'the character and original artwork may not be used for NFTs or cryptocurrency projects, AI training or dataset generation, tracing, or direct copying of my original artwork.',
+
+    'commission.queue': 'commission queue',
   },
 
   th: {
@@ -108,7 +110,7 @@ const translations = {
     'nav.home': 'หน้าแรก',
     'nav.commission': 'รายละเอียดคอมมิชชั่น',
     'nav.tos': 'ข้อกำหนด',
-    'nav.contact': 'ติดต่อ',
+    'nav.contact': 'ช่องทางติดตาม',
 
     'commission.ribbon': 'รายละเอียดคอมมิชชั่น',
 
@@ -205,5 +207,7 @@ const translations = {
     'tos.adopt.ownership.point10': 'หากต้องการนำคาแรกเตอร์ไปใช้กับสินค้า การสร้างแบรนด์ ผลิตภัณฑ์ หรือโปรเจกต์เชิงพาณิชย์อื่น ๆ กรุณาดูข้อกำหนดเกี่ยวกับสิทธิ์ในการใช้งาน หรือติดต่อฉันหากไม่แน่ใจว่าการใช้งานนั้นเข้าข่ายหรือไม่',
     'tos.adopt.ownership.point11': 'ฉันยังคงมีสิทธิ์นำผลงาน Adopt ต้นฉบับไปแสดงในพอร์ตโฟลิโอและโซเชียลมีเดียของฉัน รวมถึงใช้คาแรกเตอร์เป็นตัวอย่างผลงานของฉัน',
     'tos.adopt.ownership.point12': 'ห้ามนำคาแรกเตอร์หรือผลงานต้นฉบับไปใช้กับ NFT หรือโปรเจกต์ Cryptocurrency การฝึก AI หรือสร้างชุดข้อมูล การวาดทับ (Tracing) หรือการคัดลอกผลงานต้นฉบับของฉันโดยตรง',
+
+    'commission.queue': 'คิวงานคอมมิชชั่น',
   },
 };
