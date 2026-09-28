@@ -1,3 +1,42 @@
+function initLang() {
+  let saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  setLang(saved || 'en');
+
+  // delegated, so it also works for the copy inside the mobile menu
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.lang-btn');
+    if (btn) setLang(btn.dataset.lang);
+  });
+}
+
+function setLang(lang) {
+  if (!translations[lang]) lang = 'en';
+  document.documentElement.lang = lang;   // your CSS already swaps fonts on this
+  try { localStorage.setItem('lang', lang); } catch (e) {}
+
+  const t = key => translations[lang][key] || translations.en[key];
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t(el.dataset.i18n);
+    if (v) el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+    const v = t(el.dataset.i18nAlt);
+    if (v) el.alt = v;
+  });
+  const title = t('page.title');
+  if (title) document.title = title;
+
+  document.querySelectorAll('.lang-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.lang === lang));
+
+  // keep the mobile nav's current-page label in sync
+  const cur = document.querySelector('.nav-wrap .nav-btn.active');
+  const label = document.querySelector('.mobile-nav-current');
+  if (cur && label) label.textContent = cur.textContent;
+}
+
 // Some random colors
 const colors = ["#93D8EF","#fff", "#FFECD9"];
 
@@ -69,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   buildMobileNav();
+  initLang();         
   initUsagePricing();
   initCarousels();
 
@@ -160,4 +200,9 @@ function buildMobileNav() {
       bar.setAttribute('aria-expanded', 'false');
     }
   });
+
+    wrap.appendChild(bar);
+  const sw = document.querySelector('.nav-wrap .lang-switch');
+  if (sw) dropdown.appendChild(sw.cloneNode(true));   // <-- add
+  wrap.appendChild(dropdown);
 }
