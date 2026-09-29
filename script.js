@@ -108,7 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   buildMobileNav();
-  initLang();         
+  initLang();  
+  initLightbox();       
   initUsagePricing();
   initCarousels();
 
@@ -205,4 +206,41 @@ function buildMobileNav() {
   const sw = document.querySelector('.nav-wrap .lang-switch');
   if (sw) dropdown.appendChild(sw.cloneNode(true));   // <-- add
   wrap.appendChild(dropdown);
+}
+
+function initLightbox() {
+  const items = document.querySelectorAll('.carousel-item img');
+  if (!items.length) return;
+
+  const box = document.createElement('div');
+  box.className = 'lightbox';
+  box.innerHTML =
+    '<button type="button" class="lightbox-close" aria-label="Close">&times;</button>' +
+    '<img class="lightbox-img" alt="">';
+  document.body.appendChild(box);
+  const big = box.querySelector('.lightbox-img');
+
+  const open = img => {
+    // ถ้ารูปใน carousel เป็นไฟล์ small ให้ลองใช้ large แทน (ของ ArtStation)
+    big.src = img.src.replace('/small/', '/large/');
+    big.alt = img.alt;
+    box.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  const close = () => {
+    box.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  items.forEach(img => {
+    img.parentElement.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => open(img));
+  });
+
+  box.addEventListener('click', e => {
+    if (e.target !== big) close();   // กดพื้นหลังหรือปุ่ม × เพื่อปิด
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') close();
+  });
 }
