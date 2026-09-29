@@ -523,9 +523,45 @@ main{max-width:1180px;margin:0 auto;padding:36px 24px 0;}
   border-radius:inherit;
 }
 
+/* LIGHTBOX */
+.lightbox{
+  position:fixed;inset:0;z-index:100;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+  background:rgba(109,125,131,0.55);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  opacity:0;pointer-events:none;
+  transition:opacity .25s ease;
+}
+.lightbox.open{opacity:1;pointer-events:auto;}
+.lightbox-img{
+  max-width:100%;max-height:100%;
+  border-radius:var(--radius-md);
+  box-shadow:var(--shadow-card);
+  transform:scale(.96);
+  transition:transform .25s ease;
+}
+.lightbox.open .lightbox-img{transform:scale(1);}
+.lightbox-close{
+  position:absolute;top:16px;right:16px;
+  width:44px;height:44px;border-radius:50%;
+  border:none;background:var(--white);
+  color:var(--ink-700);font-size:26px;line-height:1;
+  cursor:pointer;box-shadow:var(--shadow-nav);
+}
+
 .ball {
   position: absolute;
   border-radius: 100%;
   opacity: 0.7;
   z-index: -2;
 }
+
+/* ===== fix horizontal overflow ===== */
+
+/* safety net */
+html,body{max-width:100%;overflow-x:hidden;}
+
+/* 1. balls: fixed = ไม่ขยายความกว้างของหน้า */
+.ball{position:fixed;pointer-events:none;}
