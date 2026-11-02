@@ -351,6 +351,25 @@ main{max-width:1180px;margin:0 auto;padding:36px 24px 0;}
   border-radius:50%;
   background:var(--blue-500);
 }
+
+.my-btn {
+  display: inline-block;
+  background: var(--blue-600);
+  color: #FFFFFF;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px -8px rgba(63, 120, 180, 0.25);
+  transition: transform 0.18s ease;
+  width: fit-content;
+}
+
+.my-btn:hover {
+  transform: translateY(-3px);
+}
  
 /* CAROUSEL */
 .carousel-row{
